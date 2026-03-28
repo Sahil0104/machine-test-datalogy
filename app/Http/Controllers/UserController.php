@@ -111,9 +111,23 @@ class UserController extends Controller
 
     // ─── Delete user (AJAX) ───────────────────────────────────────────────────
 
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        User::findOrFail($id)->delete();
+        $user = User::findOrFail($id);
+        $isCurrentUser = (int) session('user_id') === (int) $user->id;
+
+        $user->delete();
+
+        if ($isCurrentUser) {
+            $request->session()->flush();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Your account has been deleted. Please sign in again.',
+                'redirect' => route('login'),
+            ]);
+        }
+
         return response()->json(['success' => true, 'message' => 'User deleted successfully.']);
     }
 }

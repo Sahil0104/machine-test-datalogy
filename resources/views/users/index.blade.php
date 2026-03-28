@@ -42,15 +42,15 @@
             @csrf
             <div class="form-group">
                 <label class="form-label">First Name</label>
-                <input type="text" name="first_name" id="add_first_name" class="form-control" placeholder="John">
+                <input type="text" name="first_name" id="add_first_name" class="form-control">
             </div>
             <div class="form-group">
                 <label class="form-label">Last Name</label>
-                <input type="text" name="last_name" id="add_last_name" class="form-control" placeholder="Doe">
+                <input type="text" name="last_name" id="add_last_name" class="form-control">
             </div>
             <div class="form-group">
                 <label class="form-label">Email Address</label>
-                <input type="email" name="email" id="add_email" class="form-control" placeholder="john@example.com">
+                <input type="email" name="email" id="add_email" class="form-control" placeholder="xyz@example.com">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline" data-close="addModal">Cancel</button>
@@ -265,8 +265,14 @@ $('#confirmDelete').on('click', function () {
     .done(function (res) {
         if (res.success) {
             closeModal('deleteModal');
-            table.ajax.reload(null, false);
             deleteId = null;
+
+            if (res.redirect) {
+                window.location.href = res.redirect;
+                return;
+            }
+
+            table.ajax.reload(null, false);
         }
     });
 });
