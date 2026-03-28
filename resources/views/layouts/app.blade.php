@@ -267,8 +267,8 @@
 
 <div class="sidebar">
     <div class="sidebar-brand">
-        <h1>UserPanel</h1>
-        <span>Management System</span>
+            <h1>Datalogy User Panel</h1>
+        {{-- <span>Management System</span> --}}
     </div>
     <nav class="sidebar-nav">
         <div class="nav-label">Menu</div>

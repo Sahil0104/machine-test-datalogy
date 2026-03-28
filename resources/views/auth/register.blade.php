@@ -22,14 +22,14 @@
                 <label class="form-label" for="first_name">First Name</label>
                 <input type="text" id="first_name" name="first_name"
                        class="form-control @error('first_name') error @enderror"
-                       value="{{ old('first_name') }}" placeholder="John">
+                       value="{{ old('first_name') }}">
                 @error('first_name')<label class="error">{{ $message }}</label>@enderror
             </div>
             <div class="form-group">
                 <label class="form-label" for="last_name">Last Name</label>
                 <input type="text" id="last_name" name="last_name"
                        class="form-control @error('last_name') error @enderror"
-                       value="{{ old('last_name') }}" placeholder="Doe">
+                       value="{{ old('last_name') }}">
                 @error('last_name')<label class="error">{{ $message }}</label>@enderror
             </div>
         </div>
@@ -38,7 +38,7 @@
             <label class="form-label" for="email">Email Address</label>
             <input type="email" id="email" name="email"
                    class="form-control @error('email') error @enderror"
-                   value="{{ old('email') }}" placeholder="you@example.com">
+                   value="{{ old('email') }}">
             @error('email')<label class="error">{{ $message }}</label>@enderror
         </div>
 

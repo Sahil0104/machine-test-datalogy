@@ -135,8 +135,8 @@
 <body>
     <div class="auth-wrapper">
         <div class="auth-logo">
-            <h1>UserPanel</h1>
-            <p>User Management System</p>
+            <h1>Datalogy User Panel</h1>
+            {{-- <p>User Management System</p> --}}
         </div>
         @yield('content')
     </div>
