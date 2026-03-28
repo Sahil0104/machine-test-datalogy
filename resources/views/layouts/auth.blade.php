@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'User Management')</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -23,7 +23,7 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Manrope', sans-serif;
             background: var(--bg);
             color: var(--text);
             min-height: 100vh;
@@ -61,7 +61,7 @@
             margin-bottom: 28px;
         }
         .auth-logo h1 {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 1.6rem;
             color: var(--accent2);
         }
@@ -75,7 +75,7 @@
         }
 
         .auth-card h2 {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 1.3rem;
             margin-bottom: 6px;
         }

@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'User Management')</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,7 +26,7 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Manrope', sans-serif;
             background: var(--bg);
             color: var(--text);
             min-height: 100vh;
@@ -49,7 +49,7 @@
             border-bottom: 1px solid var(--border);
         }
         .sidebar-brand h1 {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 1.25rem;
             color: var(--accent2);
             letter-spacing: -.5px;
@@ -103,7 +103,7 @@
             padding: 0 28px;
             gap: 12px;
         }
-        .topbar-title { font-family: 'Syne', sans-serif; font-size: 1.05rem; flex: 1; }
+        .topbar-title { font-family: 'Sora', sans-serif; font-size: 1.05rem; flex: 1; }
         .content { padding: 28px; flex: 1; }
 
         /* ── Cards ── */
@@ -134,7 +134,7 @@
             flex-shrink: 0;
         }
         .stat-icon svg { color: var(--accent2); width: 24px; height: 24px; }
-        .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; }
+        .stat-num { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; }
         .stat-label { color: var(--muted); font-size: .85rem; margin-top: 4px; }
 
         /* ── Buttons ── */
@@ -201,13 +201,13 @@
             display: flex; align-items: center; justify-content: space-between;
             margin-bottom: 22px;
         }
-        .modal-title { font-family: 'Syne', sans-serif; font-size: 1.1rem; }
+        .modal-title { font-family: 'Sora', sans-serif; font-size: 1.1rem; }
         .modal-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 1.3rem; line-height: 1; }
         .modal-close:hover { color: var(--text); }
         .modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
 
         /* ── DataTable custom ── */
-        .dataTables_wrapper { font-family: 'DM Sans', sans-serif; }
+        .dataTables_wrapper { font-family: 'Manrope', sans-serif; }
         table.dataTable { border-collapse: collapse !important; width: 100% !important; }
         table.dataTable thead th {
             background: rgba(255,255,255,.03);
